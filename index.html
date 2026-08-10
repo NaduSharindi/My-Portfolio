@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========== SEO & DOCUMENT META ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nadunika Sharindi — Software Engineering undergraduate and full-stack developer building web and mobile applications with React, Node.js, and modern tooling." />
+  <meta name="author" content="Nadunika Sharindi" />
+  <meta name="theme-color" content="#0f766e" />
+  <title>Nadunika Sharindi | Full-Stack Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts: Syne (display) + Manrope (body) — loaded asynchronously for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== STICKY NAVIGATION ========== -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">Nadunika Sharindi</a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Open menu"
+      >
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark / light mode toggle -->
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Toggle dark mode"
+      >
+        <!-- Sun icon (shown in light mode) -->
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <!-- Moon icon (shown in dark mode) -->
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO / INTRO ========== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__atmosphere" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Software Engineering Undergraduate</p>
+          <h1 id="hero-heading" class="hero__name">Nadunika Sharindi</h1>
+          <p class="hero__role">Full-Stack Developer</p>
+          <p class="hero__lede">
+            Building practical web and mobile products that streamline HR, operations, and decision-making.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img
+            class="hero__photo"
+            src="assets/profile.png"
+            alt="Portrait of Nadunika Sharindi"
+            width="400"
+            height="400"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="section__inner reveal">
+        <header class="section__header">
+          <p class="section__label">About</p>
+          <h2 id="about-heading">Who I am</h2>
+        </header>
+        <div class="about__grid">
+          <div class="about__bio">
+            <p>
+              Resourceful Software Engineering undergraduate with hands-on full-stack development
+              experience across enterprise environments. Proficient in modern frameworks like
+              Node.js and React, with a proven track record of delivering impactful web applications
+              for attendance management and operational efficiency.
+            </p>
+            <p>
+              A proactive problem-solver eager to leverage technical expertise to drive
+              organizational success — from REST APIs and cloud deployments to native iOS apps.
+            </p>
+          </div>
+          <aside class="about__education" aria-labelledby="education-heading">
+            <h3 id="education-heading">Education</h3>
+            <ul class="edu-list">
+              <li>
+                <strong>BSc (Hons) Computing</strong>
+                <span>Software Engineering · Coventry University UK | NIBM</span>
+                <span class="edu-list__meta">Reading from 2023</span>
+              </li>
+              <li>
+                <strong>Higher National Diploma in Software Engineering</strong>
+                <span>NIBM</span>
+                <span class="edu-list__meta">2021 – 2022</span>
+              </li>
+              <li>
+                <strong>Diploma in Software Engineering</strong>
+                <span>NIBM</span>
+                <span class="edu-list__meta">2020 – 2021</span>
+              </li>
+              <li>
+                <strong>Diploma in Business English</strong>
+                <span>British Way English Academy</span>
+                <span class="edu-list__meta">Jan – Apr 2020</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="section__inner reveal">
+        <header class="section__header">
+          <p class="section__label">Skills</p>
+          <h2 id="skills-heading">What I work with</h2>
+          <p class="section__intro">A toolkit shaped by enterprise projects, internships, and academic work.</p>
+        </header>
+
+        <div class="skills__grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>C#</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>TypeScript</li>
+              <li>Swift</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <ul>
+              <li>React</li>
+              <li>Angular</li>
+              <li>HTML5 &amp; CSS3</li>
+              <li>SwiftUI</li>
+              <li>UI/UX Design</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Spring Boot</li>
+              <li>Flask</li>
+              <li>.NET</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <ul>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>MS SQL</li>
+              <li>SQLite</li>
+              <li>Oracle</li>
+              <li>Firebase / Core Data</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul>
+              <li>AWS</li>
+              <li>Git &amp; GitHub</li>
+              <li>Docker</li>
+              <li>Postman</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Strengths</h3>
+            <ul>
+              <li>Problem-solving</li>
+              <li>Communication</li>
+              <li>Collaboration</li>
+              <li>Analytical thinking</li>
+              <li>Time management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="section__inner reveal">
+        <header class="section__header">
+          <p class="section__label">Projects</p>
+          <h2 id="projects-heading">Selected work</h2>
+          <p class="section__intro">Full-stack systems, APIs, and mobile apps built for real operational needs.</p>
+        </header>
+
+        <ul class="project-list">
+          <!-- Edit project links below when you have live demos or repos -->
+          <li class="project">
+            <h3 class="project__title">Clock-in-Control</h3>
+            <p class="project__stack">React · Node.js · MongoDB</p>
+            <p class="project__desc">
+              Full-stack attendance management system that streamlines HR workflows and gives
+              real-time visibility across multiple farm locations.
+            </p>
+          </li>
+          <li class="project">
+            <h3 class="project__title">Tuk-Tuk Fleet Management API</h3>
+            <p class="project__stack">Node.js · Express · MongoDB · AWS · JWT</p>
+            <p class="project__desc">
+              Scalable REST API with secure JWT auth and GeoJSON vehicle tracking, deployed on AWS.
+            </p>
+          </li>
+          <li class="project">
+            <h3 class="project__title">Asset Finder</h3>
+            <p class="project__stack">Python · Flask · SQLite · HTML/CSS/JS</p>
+            <p class="project__desc">
+              Internal search tool that replaced manual Excel lookups for fixed-asset tracking
+              across eight locations.
+            </p>
+          </li>
+          <li class="project">
+            <h3 class="project__title">Firewood Suppliers Management</h3>
+            <p class="project__stack">React · TypeScript · SQL</p>
+            <p class="project__desc">
+              Supply-chain web app for MAS Fabric Park that digitizes supplier logistics and tracking.
+            </p>
+          </li>
+          <li class="project">
+            <h3 class="project__title">HatchPlan-Pro</h3>
+            <p class="project__stack">Swift · SwiftUI · Firebase · MVVM</p>
+            <p class="project__desc">
+              Native iOS decision-support system for hatchery scheduling, with role-based biometric auth.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section class="section experience" id="experience" aria-labelledby="experience-heading">
+      <div class="section__inner reveal">
+        <header class="section__header">
+          <p class="section__label">Experience</p>
+          <h2 id="experience-heading">Where I've worked</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__date">Sept 2024 – Aug 2026</p>
+            <h3 class="timeline__role">Software Developer</h3>
+            <p class="timeline__org">Three Acre Farms PLC (Prima Group)</p>
+            <p class="timeline__desc">
+              Designed and delivered a full-stack HR web application using React, Node.js, and MongoDB
+              to digitalize attendance and HR processes across six locations.
+            </p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__date">Feb 2023 – Feb 2024</p>
+            <h3 class="timeline__role">Intern Software Engineer</h3>
+            <p class="timeline__org">MAS Holdings</p>
+            <p class="timeline__desc">
+              Led front-end and back-end development of the Firewood Suppliers Management System
+              with React, TypeScript, and SQL.
+            </p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__date">Feb 2022 – Aug 2022</p>
+            <h3 class="timeline__role">Intern Software Engineer</h3>
+            <p class="timeline__org">Ceylon Electricity Board (IT Branch)</p>
+            <p class="timeline__desc">
+              Built backend features for a Spring Boot maintenance management system and related web projects.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="section__inner reveal">
+        <header class="section__header">
+          <p class="section__label">Contact</p>
+          <h2 id="contact-heading">Let’s connect</h2>
+          <p class="section__intro">Open to roles, collaborations, and interesting engineering problems.</p>
+        </header>
+
+        <ul class="contact-list">
+          <li>
+            <a class="contact-link" href="mailto:nadusharindi@gmail.com" aria-label="Email Nadunika at nadusharindi@gmail.com">
+              <span class="contact-link__label">Email</span>
+              <span class="contact-link__value">nadusharindi@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <!-- Update this LinkedIn URL to your exact profile if needed -->
+            <a class="contact-link" href="https://www.linkedin.com/in/nadunikasharindi" target="_blank" rel="noopener noreferrer" aria-label="Nadunika on LinkedIn (opens in new tab)">
+              <span class="contact-link__label">LinkedIn</span>
+              <span class="contact-link__value">linkedin.com/in/nadunikasharindi</span>
+            </a>
+          </li>
+          <li>
+            <!-- Update this GitHub URL to your exact profile if needed -->
+            <a class="contact-link" href="https://github.com/NadunikaSharindi" target="_blank" rel="noopener noreferrer" aria-label="Nadunika on GitHub (opens in new tab)">
+              <span class="contact-link__label">GitHub</span>
+              <span class="contact-link__value">github.com/NadunikaSharindi</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://wa.me/94717471866" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Nadunika at +94 717 471 866 (opens in new tab)">
+              <span class="contact-link__label">WhatsApp</span>
+              <span class="contact-link__value">+94 717 471 866</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; <span id="year"></span> Nadunika Sharindi. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
