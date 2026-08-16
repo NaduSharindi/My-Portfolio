@@ -107,4 +107,18 @@
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------- Back to top ---------- */
+  // Hash links to a sticky header do not scroll the page; scroll window instead.
+  const scrollToTop = (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (history.replaceState) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  };
+
+  document.querySelectorAll('a[href="#top"]').forEach((link) => {
+    link.addEventListener("click", scrollToTop);
+  });
 })();
