@@ -156,22 +156,36 @@
           <p class="section__intro">A toolkit shaped by enterprise projects, internships, and academic work.</p>
         </header>
 
+        <!-- Technical skills matrix: one row per category -->
         <div class="skills__grid">
           <div class="skill-group">
             <h3>Languages</h3>
             <ul>
+              <li>C#</li>
               <li>JavaScript</li>
+              <li>TypeScript</li>
               <li>Java</li>
               <li>Python</li>
-              <li>C#</li>
+              <li>Swift</li>
               <li>C</li>
               <li>SQL</li>
-              <li>TypeScript</li>
-              <li>Swift</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Frontend</h3>
+            <h3>Backend &amp; Frameworks</h3>
+            <ul>
+              <li>ASP.NET Core (.NET 10)</li>
+              <li>Web API</li>
+              <li>ASP.NET Core MVC</li>
+              <li>Entity Framework Core</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Spring Boot</li>
+              <li>Flask</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend &amp; Mobile</h3>
             <ul>
               <li>React</li>
               <li>Angular</li>
@@ -181,34 +195,50 @@
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Backend</h3>
+            <h3>Databases &amp; Enterprise</h3>
             <ul>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Spring Boot</li>
-              <li>Flask</li>
-              <li>.NET</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>Databases</h3>
-            <ul>
+              <li>MS SQL Server</li>
+              <li>T-SQL (Stored Procedures, Triggers)</li>
+              <li>AS/400 (IBM i Fixed-Width)</li>
               <li>MongoDB</li>
               <li>MySQL</li>
-              <li>MS SQL</li>
               <li>SQLite</li>
               <li>Oracle</li>
               <li>Firebase / Core Data</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Cloud &amp; DevOps</h3>
+            <h3>Integrations &amp; APIs</h3>
+            <ul>
+              <li>RESTful APIs (JSON/XML)</li>
+              <li>SOAP Web Services</li>
+              <li>JWT Auth</li>
+              <li>API Key Security</li>
+              <li>Idempotency</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud, DevOps &amp; Tooling</h3>
             <ul>
               <li>AWS</li>
-              <li>Git &amp; GitHub</li>
               <li>Docker</li>
+              <li>IIS / Windows Server Deployment</li>
+              <li>PowerShell</li>
+              <li>GitHub Actions CI/CD</li>
               <li>Postman</li>
-              <li>RESTful APIs</li>
+              <li>Git</li>
+              <li>xUnit</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>OWASP &amp; Security</h3>
+            <ul>
+              <li>PBKDF2 Password Hashing</li>
+              <li>CSRF Protection</li>
+              <li>Account Lockout</li>
+              <li>Rate Limiting</li>
+              <li>XXE Guard</li>
+              <li>Formula Injection Prevention</li>
             </ul>
           </div>
           <div class="skill-group">
@@ -231,47 +261,142 @@
         <header class="section__header">
           <p class="section__label">Projects</p>
           <h2 id="projects-heading">Selected work</h2>
-          <p class="section__intro">Full-stack systems, APIs, and mobile apps built for real operational needs.</p>
+          <p class="section__intro">Enterprise .NET systems, APIs, mobile apps, and AI prototypes built for real operational needs.</p>
         </header>
 
         <ul class="project-list">
           <!-- Edit project links below when you have live demos or repos -->
           <li class="project">
+            <h3 class="project__title">Stock Reconciler – Automated Inventory Reconciliation Platform</h3>
+            <p class="project__stack">C# · ASP.NET Core MVC · SQL Server · REST/SOAP · GitHub Actions</p>
+            <div class="project__body">
+              <p class="project__desc">
+                Enterprise stock reconciliation platform for Three Acre Farms PLC (Prima Group) that parses
+                ERP and AS/400 extracts, computes stock variances, and syncs approved results to finance.
+              </p>
+              <details class="project__more">
+                <summary>Key highlights</summary>
+                <ul class="project__highlights">
+                  <li>Multi-format engine parsing ERP exports and farm count files, including IBM i / AS/400 fixed-width extracts with trailer-record verification, with color-coded Excel audit reports.</li>
+                  <li>7 custom SQL Server stored procedures (paged search, dashboard aggregation, lockout handling) and an append-only audit trail with concurrency locks that prevent dual approval.</li>
+                  <li>Automated posting of approved variances to central finance with retry policies and idempotency keys to eliminate duplicate postings.</li>
+                  <li>35 automated unit/integration tests, GitHub Actions CI/CD, package vulnerability scanning, and IIS backup/rollback scripts.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="project">
+            <h3 class="project__title">AssetTrack / AssetFinder – Enterprise Asset Management System</h3>
+            <p class="project__stack">C# · ASP.NET Core MVC · SQL Server · REST/SOAP · AS/400</p>
+            <div class="project__body">
+              <p class="project__desc">
+                Asset lookup and verification system used across eight Three Acre Farms locations, replacing
+                slow manual Excel lookups with fast search and in-field photo verification.
+              </p>
+              <details class="project__more">
+                <summary>Key highlights</summary>
+                <ul class="project__highlights">
+                  <li>Fast lookup-card search engine with mobile-friendly photo capture so field staff can attach live physical verification photos.</li>
+                  <li>Excel register uploads and AS/400 fixed-width extract imports processed in atomic transactions, with automatic sync to the central finance asset register.</li>
+                  <li>26 passing unit tests, security testing against OWASP guidelines, and fixes for critical edge cases such as photo directory retention during IIS updates.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="project">
+            <h3 class="project__title">BankCore API – Core Banking &amp; Fund Transfer Service</h3>
+            <p class="project__stack">ASP.NET Core Web API (.NET 10) · EF Core · SQL Server · JWT · Docker · GitHub Actions</p>
+            <div class="project__body">
+              <p class="project__desc">
+                Production-grade core banking API covering customer onboarding, accounts, and atomic fund
+                transfers protected by idempotency keys and role-based security.
+              </p>
+              <details class="project__more">
+                <summary>Key highlights</summary>
+                <ul class="project__highlights">
+                  <li>Onboarding with Sri Lankan NIC validation (9-digit + V/X and 12-digit formats) and savings/current accounts with Luhn-checked account numbers.</li>
+                  <li>Deposits, withdrawals, and transfers run in atomic database transactions, accept an Idempotency-Key header to prevent duplicate debits, and enforce single and daily limits reset at Sri Lanka midnight.</li>
+                  <li>Admin / Teller / Auditor RBAC (Admins cannot initiate transfers), salted PBKDF2 password hashing, account lockout, login rate limiting, and strict security headers.</li>
+                  <li>T-SQL stored procedures for account statements, end-of-day summaries, dormant-account detection, and balance reconciliation.</li>
+                  <li>Audit logging in the same transaction as financial changes, covered by xUnit unit, service, and integration tests with Docker Compose and CI.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="project">
+            <h3 class="project__title">TaskDesk – Enterprise Office Task &amp; Workflow Manager</h3>
+            <p class="project__stack">ASP.NET Core MVC &amp; Web API (.NET 10) · EF Core · SQL Server · Identity · IIS · PowerShell</p>
+            <div class="project__body">
+              <p class="project__desc">
+                Office task and workflow manager with role-based views, REST and SOAP integrations,
+                and scripted IIS deployment with automatic rollback.
+              </p>
+              <details class="project__more">
+                <summary>Key highlights</summary>
+                <ul class="project__highlights">
+                  <li>Full task lifecycle (To Do → In Progress → Blocked → Done/Cancelled, with reopen) and role-based views for Staff, Managers, and Admins.</li>
+                  <li>Stored procedures for real-time workload reports, overdue task tracking, audit trail queries, and batched historical archiving.</li>
+                  <li>Secure REST API for external ticket creation (JSON/XML with deduplication), plus a consumed SOAP holiday-calendar service that flags due dates, with fault-tolerant fallback.</li>
+                  <li>PowerShell deployment to IIS with pre-release backups, health checks, automatic rollback, and an IIS troubleshooting runbook.</li>
+                  <li>SECURITY.md mapping OWASP Top 10 mitigations: anti-forgery tokens, strict CSP headers, XXE protection, CSV formula-injection defense, and hashed API keys.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="project">
+            <h3 class="project__title">Diabetic Retinopathy Stage Screening (AI Research Prototype)</h3>
+            <p class="project__stack">Python · MobileNetV2 · Transfer Learning · Grad-CAM · Streamlit</p>
+            <div class="project__body">
+              <p class="project__desc">
+                Multi-task CNN that grades diabetic retinopathy from fundus images, with quality gating,
+                uncertainty estimates, and visual explanations to support clinical triage.
+              </p>
+              <details class="project__more">
+                <summary>Key highlights</summary>
+                <ul class="project__highlights">
+                  <li>Trained on APTOS 2019 data with CLAHE + Ben Graham preprocessing, image-quality gating, and test-time augmentation.</li>
+                  <li>Monte-Carlo-dropout uncertainty and Grad-CAM explainability presented in a Streamlit interface.</li>
+                  <li>Achieved 0.889 QWK, 0.809 accuracy, and 0.659 macro-F1 with automated triage capability.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+          <li class="project">
             <h3 class="project__title">HRMS – Employee Attendance & Leave Management Platform</h3>
             <p class="project__stack">React · Node.js · MongoDB</p>
-            <p class="project__desc">
-              Full-stack attendance management system that streamlines HR workflows and gives
-              real-time visibility across multiple farm locations.
-            </p>
+            <div class="project__body">
+              <p class="project__desc">
+                Full-stack attendance management system that streamlines HR workflows and gives
+                real-time visibility across multiple farm locations.
+              </p>
+            </div>
           </li>
           <li class="project">
             <h3 class="project__title">Tuk-Tuk Fleet Management System REST API</h3>
             <p class="project__stack">Node.js · Express · MongoDB · AWS · JWT</p>
-            <p class="project__desc">
-              Scalable REST API with secure JWT auth and GeoJSON vehicle tracking, deployed on AWS.
-            </p>
-          </li>
-          <li class="project">
-            <h3 class="project__title">AssetTrack – Enterprise Asset Management System</h3>
-            <p class="project__stack">Python · Flask · SQLite · HTML/CSS/JS</p>
-            <p class="project__desc">
-              Internal search tool that replaced manual Excel lookups for fixed-asset tracking
-              across eight locations.
-            </p>
+            <div class="project__body">
+              <p class="project__desc">
+                Scalable REST API with secure JWT auth and GeoJSON vehicle tracking, deployed on AWS.
+              </p>
+            </div>
           </li>
           <li class="project">
             <h3 class="project__title">Firewood Suppliers Management System</h3>
             <p class="project__stack">React · TypeScript · SQL</p>
-            <p class="project__desc">
-              Supply-chain web app for MAS Fabric Park that digitizes supplier logistics and tracking.
-            </p>
+            <div class="project__body">
+              <p class="project__desc">
+                Supply-chain web app for MAS Fabric Park that digitizes supplier logistics and tracking.
+              </p>
+            </div>
           </li>
           <li class="project">
             <h3 class="project__title">HatchWise – Hatchery Decision Support System (Enterprise iOS App)</h3>
             <p class="project__stack">Swift · SwiftUI · Firebase · MVVM</p>
-            <p class="project__desc">
-              Native iOS decision-support system for hatchery scheduling, with role-based biometric auth.
-            </p>
+            <div class="project__body">
+              <p class="project__desc">
+                Native iOS decision-support system for hatchery scheduling, with role-based biometric auth.
+              </p>
+            </div>
           </li>
         </ul>
       </div>
